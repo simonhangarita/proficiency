@@ -2,7 +2,7 @@ import pytest
 from pytest import approx
 from shopping_cart import ShoppingCart
 import shopping_cart
-#Before we work with fixtures we will create a local instance of the shopping cart to use in our tests
+#Before we work with fixtures we will create a local instance of the shopping cart to use in our tests even though is not the best practice
 shopping_cart_instance = ShoppingCart()
 def test_basic_assertions():
     #First we need to check if the item appear in the cart after we add it
