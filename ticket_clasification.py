@@ -78,7 +78,7 @@ def main():
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    if len(df)>0:
+    if not df.empty:
         try:
             df['sentiment']=df.apply(lambda x:text_classification(x['text']),axis=1)
             df['priority']=df.apply(lambda x:process_sentiment(x['text'],x['sentiment']),axis=1)
